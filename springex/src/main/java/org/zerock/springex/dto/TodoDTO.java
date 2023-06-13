@@ -9,8 +9,8 @@ import java.time.LocalDate;
 @ToString
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor //다 들어있는 생성자
+@NoArgsConstructor  //추상 메서드 생성자
 
 public class TodoDTO {
 

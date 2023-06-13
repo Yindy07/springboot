@@ -91,12 +91,11 @@
                             </tr>
                             </thead>
                             <tbody>
-<%--                            <c:forEach items="${responseDTO.dtoList}" var="dto">--%>
-                                <c:forEach items="${dtoList}" var="dto">
+                            <c:forEach items="${responseDTO.dtoList}" var="dto">
                                 <tr>
                                     <th scope="row"><c:out value="${dto.tno}"/></th>
-                                    <td>
-<%--                                        <a href="/todo/read?tno=${dto.tno}&${pageRequestDTO.link}" class="text-decoration-none" data-tno="${dto.tno}" >--%>
+                                    <td><a href="/todo/read?tno=${dto.tno}<%--&${pageRequestDTO.link}--%>"
+                                           class="text-decoration-none"<%-- data-tno="${dto.tno}" --%>>
                                             <c:out value="${dto.title}"/>
                                         </a>
                                     </td>
@@ -195,7 +194,7 @@
     <div class="row footer">
         <!--<h1>Footer</h1>-->
 
-        <div class="row   fixed-bottom" style="z-index: -100">
+        <div class="row fixed-bottom" style="z-index: -100">
             <footer class="py-1 my-1 ">
                 <p class="text-center text-muted">Footer</p>
             </footer>

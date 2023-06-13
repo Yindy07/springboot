@@ -54,7 +54,8 @@
     </delete>
 
     <update id="update">
-        update tbl_todo set title = #{title} , dueDate = #{dueDate}, finished= #{finished} where tno = #{tno}
+        update tbl_todo set title = #{title} , dueDate = #{dueDate},
+                            finished= #{finished} where tno = #{tno}
     </update>
 
     <!--    <select id="selectList" resultType="org.zerock.springex.domain.TodoVO">-->
@@ -63,15 +64,15 @@
 
     <select id="selectList" resultType="org.zerock.springex.domain.TodoVO">
         select * from tbl_todo
-        <include refid="search"></include>
-        order by tno desc limit #{skip}, #{size}
+        <!--<include refid="search"></include>-->
+        order by tno desc limit #{skip}, #{size}   /*{skip} = getSkip()*/
     </select>
 
 
 
     <select id="getCount" resultType="int">
         select count(tno) from tbl_todo
-        <include refid="search"></include>
+        <!--<include refid="search"></include>-->
     </select>
 
 <!--    <select id="selectOne" resultType="org.zerock.springex.domain.TodoVO">-->
